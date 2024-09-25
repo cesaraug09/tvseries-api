@@ -1,0 +1,87 @@
+<form action="/series" method="GET">
+
+<div class="logo">
+    <img src="#">LOGO
+</div>
+
+<input type="text" name="titulo" class="input-pesquisa" placeholder="Pesquisar">
+<button type="submit">Buscar</button>
+</form>
+
+    <h1>Últimos Lançamentos</h1>
+    <div class="series">
+        {{#each lancamentos}}
+        <div class="sub-div">
+
+            <div class="images">
+                <img src="{{imagem}}">
+            </div>
+
+            <div class="titulo">{{titulo}}
+            </div>
+
+            <div class="genero">
+            {{generos}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <h1>Ação</h1>
+    <div class="series">
+        {{#each acao}}
+        <div class="sub-div">
+
+            <div class="images">
+                <img src="{{imagem}}">
+            </div>
+
+            <div class="titulo">{{titulo}}
+            </div>
+
+            <div class="genero">
+            {{generos}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <h1>Comédias</h1>
+    <div class="series">
+        {{#each comedias}}
+        <div class="sub-div">
+
+            <div class="images">
+                <img src="{{imagem}}">
+            </div>
+
+            <div class="titulo">{{titulo}}
+            </div>
+
+            <div class="genero">
+            {{generos}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <h1>Dramas</h1>
+    <div class="series">
+        {{#each dramas}}
+        <div class="sub-div">
+
+            <div class="images">
+                <img src="{{imagem}}">
+            </div>
+
+            <div class="titulo">{{titulo}}
+            </div>
+
+            <div class="genero">
+            {{generos}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    </div>
