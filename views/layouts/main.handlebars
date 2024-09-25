@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Séries e Filmes Online</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cineflix - Séries e Filmes Online</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 
         :root{
-            --bg-color: grey;
+            --bg-color: #1F1F1F;
             --red:#ad1919;
         }
     *{
@@ -24,7 +24,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        background: #4B3C4D;
+        background: var(--bg-color);
     }
 
     .container{
@@ -37,9 +37,12 @@
         flex-direction: column;
     }
     header{
+        color: whitesmoke;
         top: 0;
-        background: var(--red);
-        height: 140px;
+        background: linear-gradient(to bottom, var(--red),rgb(95, 4, 4));
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.418);
+        height: 100px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -49,8 +52,9 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        background: green;
-        width: 650px;
+        width: 600px;
+        font-weight: 700;
+        font-size: 17px;
         height: 50px;
     }
     a{
@@ -58,21 +62,33 @@
         color: inherit;
     }
     .input-pesquisa{
+        color: white;
+        font-family: 'Poppins', Arial;
+        font-size: 20px;
+        margin: 20px;
         width: 450px;
         height: 40px;
         border-radius: 20px;
-        text-align: center;
+        padding-left: 20px;
+        text-decoration: none;
+        border: 2px solid grey;
+        background: rgba(59, 59, 59, 0.658);
+        outline: none;
     }
+        .input-pesquisa:hover{
+        background: rgba(59, 59, 59, 0.658);
+        outline: none;
+    }
+
     .series{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        background: rgba(21, 255, 0, 0.171);
         width: 100%;
         padding: 0px 0px 50px;
     }
     .sub-div{
-        margin: 40px 10px;
+        margin: 30px 10px;
         height: 320px;
         width: 220px;
     }
@@ -81,7 +97,6 @@
         height: 320px;
         width: 220px;
         transition: 0.2s ease-in-out;
-
     }
     .sub-div img:hover{
         cursor: pointer;
@@ -92,21 +107,80 @@
         color: var(--red);
         font-size: small;
     }
+
+    .serie-spot{
+        position: relative;
+        display: flex;
+        width: 90%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--bg-color) 40%);
+        overflow: hidden ;
+    }
+    .serie-spot .imgbackground{
+        display: flex;
+        width: 100%;
+        opacity: 40%;
+        height: 100%;
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    .serie-spot .sub-div{
+        display: flex;
+        width: 900px;
+        left: 20px;
+        position: absolute;
+    }
+    .serie-spot .sub-div .titulo{
+        padding: 20px;
+        height: 100%;
+        margin: 10px;
+        font-size: 40px;
+        font-weight:700;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.123);
+    }
+    .titulo .subtext{
+        display: flex;
+        font-weight:200;
+        font-size: 20px;
+    }
+    .titulo .descri{
+        margin-top: 10px;
+        opacity: 80%;
+        display: flex;
+        flex-direction: column;
+        font-weight:200;
+        font-size: 15px;
+        width: 1100px;
+    }
+    footer{
+        color: rgba(255, 255, 255, 0.651);
+    }
+    .links-header i{
+        opacity: 80%;
+        margin: 4px;
+    }
+    .links-header a:hover{
+        scale: 1.05;
+        text-shadow: 0px 0px 5px red;
+    }
     </style>
 </head>
 <body>
     <header>
         <div class="links-header">
-            <a href="http://">Home</a>
-            <a href="http://">Ação</a>
-            <a href="http://">Comédia</a>
-            <a href="http://">Drama</a>
+            <a href="/"><i class='bx bx-home'></i>Home</a>
+            <a href="/action"><i class='bx bx-camera-movie'></i>Ação</a>
+            <a href="/comedy"><i class='bx bx-movie-play' ></i>Comédia</a>
+            <a href="/drama"><i class='bx bx-movie' ></i>Drama</a>
         </div>
     </header>
     <div class="container">
     {{{body}}}
     <footer>
-        Trabalho IFPB - Alunos César Augusto, João Victor e Lucas Morais.
+        Trabalho da disciplina de Linguagens de Script para a Web - Ifpb. Alunos César Augusto, João Victor e Lucas Morais.
     </footer>
     </div>
 </body>

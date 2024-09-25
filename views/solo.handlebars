@@ -1,0 +1,32 @@
+<style>
+    body{
+        overflow: hidden;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+</style>
+<div class="serie-spot">
+
+        {{#each seriespot}}
+                <img src="{{imagem}}" class="imgbackground">
+        <div class="sub-div">
+
+            <div class="images">
+                <img src="{{imagem}}">
+            </div>
+            <div class="titulo">{{titulo}}
+                <div class="subtext">
+                    {{generos}}
+
+                </div>
+                    <div class="descri">
+                    {{{resumo}}}
+                    </div>
+
+            </div>
+        </div>
+        {{/each}}
+
+</div>
