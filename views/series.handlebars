@@ -1,11 +1,44 @@
+<style>
+    .btn-search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: none;
+        color: white;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        margin-top: -63px;
+        margin-left: 450px;
+        padding: 6px;
+        border-radius: 20px;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 60px;
+        color: var(--red);
+    }
+    hr{
+        width: 80%;
+        opacity: 50%;
+        color: var(--red);
+        border: 0; /* Elimina el borde por defecto */
+        height: 2px; /* Altura de la línea */
+        background-color: var(--red);
+    }
+</style>
 <form action="/series" method="GET">
 
 <div class="logo">
-    <img src="#">LOGO
+    <i class='bx bxs-right-arrow'></i>CINEFLIX
 </div>
 
 <input type="text" name="titulo" class="input-pesquisa" placeholder="Pesquisar">
-<button type="submit">Buscar</button>
+<button type="submit" class="btn-search"><i class='bx bx-search-alt-2'></i></button>
 </form>
 
     <h1>Últimos Lançamentos</h1>
@@ -14,7 +47,7 @@
         <div class="sub-div">
 
             <div class="images">
-                <img src="{{imagem}}">
+                <a href="/series/{{titulo}}"><img src="{{imagem}}"></a>
             </div>
 
             <div class="titulo">{{titulo}}
@@ -26,14 +59,14 @@
         </div>
         {{/each}}
     </div>
-
-    <h1>Ação</h1>
+    <hr>
+    <a href="/action"><h1>Ação</h1></a>
     <div class="series">
         {{#each acao}}
         <div class="sub-div">
 
             <div class="images">
-                <img src="{{imagem}}">
+                <a href="/series/{{titulo}}"><img src="{{imagem}}"></a>
             </div>
 
             <div class="titulo">{{titulo}}
@@ -46,13 +79,14 @@
         {{/each}}
     </div>
 
-    <h1>Comédias</h1>
+    <hr>
+    <a href="/comedy"><h1>Comédias</h1></a>
     <div class="series">
         {{#each comedias}}
         <div class="sub-div">
 
             <div class="images">
-                <img src="{{imagem}}">
+                <a href="/series/{{titulo}}"><img src="{{imagem}}"></a>
             </div>
 
             <div class="titulo">{{titulo}}
@@ -64,14 +98,14 @@
         </div>
         {{/each}}
     </div>
-
-    <h1>Dramas</h1>
+    <hr>
+    <a href="/drama"><h1>Dramas</h1></a>
     <div class="series">
         {{#each dramas}}
         <div class="sub-div">
 
             <div class="images">
-                <img src="{{imagem}}">
+                <a href="/series/{{titulo}}"><img src="{{imagem}}"></a>
             </div>
 
             <div class="titulo">{{titulo}}
